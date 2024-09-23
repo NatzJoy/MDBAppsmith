@@ -1,0 +1,3 @@
+SELECT * FROM public."movies" 
+ORDER BY title 
+LIMIT {{MoviesTable.pageSize}} OFFSET {{(MoviesTable.pageNo - 1) * MoviesTable.pageSize}};
