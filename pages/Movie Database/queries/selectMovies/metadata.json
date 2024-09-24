@@ -5,12 +5,12 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  *\nFROM\n  public.movies\nWHERE\n  \"title\" ilike '%{{MoviesTable.searchText}}%'\nORDER BY\n  \"{{MoviesTable.sortOrder.column || 'id'}}\" {{MoviesTable.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}\nLIMIT\n  {{MoviesTable.pageSize}}\nOFFSET\n  {{MoviesTable.pageOffset}}",
+      "body": "SELECT * FROM movies LIMIT 50;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
         {
-          "value": true
+          "value": false
         }
       ],
       "timeoutInMillisecond": 10000
@@ -22,14 +22,10 @@
       "name": "Movies",
       "pluginId": "postgres-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "dynamicBindingPathList": [],
     "executeOnLoad": true,
     "name": "selectMovies",
     "pageId": "Movie Database",
-    "userSetOnLoad": false
+    "userSetOnLoad": true
   }
 }

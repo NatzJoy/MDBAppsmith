@@ -1,12 +1,1 @@
-SELECT
-  *
-FROM
-  public.movies
-WHERE
-  "title" ilike '%{{MoviesTable.searchText}}%'
-ORDER BY
-  "{{MoviesTable.sortOrder.column || 'id'}}" {{MoviesTable.sortOrder.order !== "desc" ? "" : "DESC"}}
-LIMIT
-  {{MoviesTable.pageSize}}
-OFFSET
-  {{MoviesTable.pageOffset}}
+SELECT * FROM movies LIMIT 50;

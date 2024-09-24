@@ -1,1 +1,24 @@
-INSERT INTO public.movies ("imdb_id","title","original_title","overview","release_date","runtime","budget","popularity","vote_average","vote_count","genres","production_companies","production_countries","spoken_languages","status","tagline","homepage","director","keywords") VALUES ('{{(MoviesTable.newRow || {}).imdb_id}}','{{(MoviesTable.newRow || {}).title}}','{{(MoviesTable.newRow || {}).original_title}}','{{(MoviesTable.newRow || {}).overview}}','{{(MoviesTable.newRow || {}).release_date}}','{{(MoviesTable.newRow || {}).runtime}}','{{(MoviesTable.newRow || {}).budget}}','{{(MoviesTable.newRow || {}).popularity}}','{{(MoviesTable.newRow || {}).vote_average}}','{{(MoviesTable.newRow || {}).vote_count}}','{{(MoviesTable.newRow || {}).genres}}','{{(MoviesTable.newRow || {}).production_companies}}','{{(MoviesTable.newRow || {}).production_countries}}','{{(MoviesTable.newRow || {}).spoken_languages}}','{{(MoviesTable.newRow || {}).status}}','{{(MoviesTable.newRow || {}).tagline}}','{{(MoviesTable.newRow || {}).homepage}}','{{(MoviesTable.newRow || {}).director}}','{{(MoviesTable.newRow || {}).keywords}}')
+INSERT INTO public.movies 
+("id", "imdb_id", "title", "original_title", "overview", "release_date", "runtime", "budget", "popularity", "vote_average", "vote_count", "genres", "production_companies", "production_countries", "spoken_languages", "status", "tagline", "homepage", "director", "keywords") 
+VALUES 
+(
+    '{{(MoviesTable.newRow || {}).imdb_id}}', 
+    '{{(MoviesTable.newRow || {}).title}}', 
+    '{{(MoviesTable.newRow || {}).original_title}}', 
+    '{{(MoviesTable.newRow || {}).overview}}', 
+    '{{(MoviesTable.newRow || {}).release_date}}', 
+    '{{(MoviesTable.newRow || {}).runtime}}', 
+    '{{(MoviesTable.newRow || {}).budget}}', 
+    '{{(MoviesTable.newRow || {}).popularity}}', 
+    '{{(MoviesTable.newRow || {}).vote_average}}', 
+    '{{(MoviesTable.newRow || {}).vote_count}}', 
+    '{{(MoviesTable.newRow || {}).genres}}', 
+    '{{(MoviesTable.newRow || {}).production_companies}}', 
+    '{{(MoviesTable.newRow || {}).production_countries}}', 
+    '{{(MoviesTable.newRow || {}).spoken_languages}}', 
+    '{{(MoviesTable.newRow || {}).status}}', 
+    '{{(MoviesTable.newRow || {}).tagline}}', 
+    '{{(MoviesTable.newRow || {}).homepage}}', 
+    '{{(MoviesTable.newRow || {}).director}}', 
+    '{{(MoviesTable.newRow || {}).keywords}}'
+);

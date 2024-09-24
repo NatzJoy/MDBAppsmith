@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f2c1598714823e2c82ae8c_a3ab4ead-6fce-41ce-8d8f-3141863a10b1",
-  "id": "Movie Database_totalMovies",
+  "gitSyncId": "66f2c1598714823e2c82ae8c_6a973a0e-9b54-4ab2-82e2-7523e9804fb3",
+  "id": "Movie Database_fetchMovies",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) FROM movies;",
+      "body": "SELECT * FROM movies LIMIT 100;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -24,7 +24,7 @@
     },
     "dynamicBindingPathList": [],
     "executeOnLoad": true,
-    "name": "totalMovies",
+    "name": "fetchMovies",
     "pageId": "Movie Database",
     "userSetOnLoad": true
   }

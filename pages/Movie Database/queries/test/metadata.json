@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f2c1598714823e2c82ae8c_a3ab4ead-6fce-41ce-8d8f-3141863a10b1",
-  "id": "Movie Database_totalMovies",
+  "gitSyncId": "66f2c1598714823e2c82ae8c_30077d09-4925-4409-9c21-57452857d5d8",
+  "id": "Movie Database_test",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT COUNT(*) FROM movies;",
+      "body": "SELECT * \nFROM public.movies\nORDER BY title \nLIMIT 10 OFFSET 0;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "totalMovies",
+    "executeOnLoad": false,
+    "name": "test",
     "pageId": "Movie Database",
-    "userSetOnLoad": true
+    "userSetOnLoad": false
   }
 }
