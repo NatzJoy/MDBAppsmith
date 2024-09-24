@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "0px",
-  "bottomRow": 29,
+  "bottomRow": 396,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
@@ -58,7 +58,11 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClose"
+    }
+  ],
   "height": 290,
   "isCanvas": true,
   "isLoading": false,
@@ -72,6 +76,7 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 106,
   "needsErrorInfo": false,
+  "onClose": "{{closeModal(MovieDetails.name);}}",
   "parentColumnSpace": 13.0625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -83,5 +88,5 @@
   "version": 2,
   "widgetId": "5hv1i2x28r",
   "widgetName": "MovieDetails",
-  "width": 472
+  "width": 746
 }

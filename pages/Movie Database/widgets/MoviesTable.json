@@ -98,9 +98,6 @@
       "key": "primaryColumns.keywords.computedValue"
     },
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.imdb_id.computedValue"
     },
     {
@@ -141,6 +138,9 @@
     },
     {
       "key": "primaryColumns.customColumn1.buttonColor"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [

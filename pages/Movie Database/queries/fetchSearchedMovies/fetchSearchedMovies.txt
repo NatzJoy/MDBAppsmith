@@ -1,0 +1,3 @@
+SELECT * FROM public."movies"
+WHERE title ILIKE '%' || {{searchMovieInput.text}} || '%'
+LIMIT 100;
