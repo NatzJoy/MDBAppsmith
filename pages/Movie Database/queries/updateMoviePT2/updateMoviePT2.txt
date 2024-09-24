@@ -1,0 +1,12 @@
+UPDATE public."movies"
+SET 
+    original_title = '{{MoviesTable.updatedRow.original_title}}',
+    overview = '{{MoviesTable.updatedRow.overview}}',
+    popularity = COALESCE(NULLIF('{{MoviesTable.updatedRow.popularity}}', '')::double precision, popularity),
+    vote_average = COALESCE(NULLIF('{{MoviesTable.updatedRow.vote_average}}', '')::double precision, vote_average),
+    vote_count = COALESCE(NULLIF('{{MoviesTable.updatedRow.vote_count}}', '')::double precision, vote_count),
+    genres = '{{MoviesTable.updatedRow.genres}}',
+    tagline = '{{MoviesTable.updatedRow.tagline}}',
+    director = '{{MoviesTable.updatedRow.director}}',
+    keywords = '{{MoviesTable.updatedRow.keywords}}'
+WHERE id = COALESCE(NULLIF('{{MoviesTable.updatedRow.id}}', '')::integer, id);

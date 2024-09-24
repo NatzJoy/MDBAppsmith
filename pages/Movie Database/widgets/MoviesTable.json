@@ -53,9 +53,10 @@
     "spoken_languages",
     "status",
     "homepage",
+    "customColumn1",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1727215523172,
+  "columnUpdatedAt": 1727216360775,
   "columnWidthMap": {
     "title": 510
   },
@@ -131,6 +132,15 @@
     },
     {
       "key": "primaryColumns.homepage.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn1.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn1.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn1.buttonColor"
     }
   ],
   "dynamicPropertyPathList": [
@@ -254,7 +264,7 @@
       "label": "Save / Discard",
       "notation": "standard",
       "onDiscard": "{{fetchMovies.data}}",
-      "onSave": "{{updateMovies.run().then(() => {\n  showAlert('', 'success');\n});}}",
+      "onSave": "{{updateMoviePT2.run()}}",
       "originalId": "EditActions1",
       "saveActionIconName": "lifesaver",
       "saveActionLabel": "Save",
@@ -293,6 +303,46 @@
       "label": "budget",
       "notation": "standard",
       "originalId": "budget",
+      "sticky": "",
+      "textColor": "#18181b",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "details",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonColor": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "buttonLabel": "View Details",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "#f3e8ff",
+      "columnType": "button",
+      "computedValue": "",
+      "currencyCode": "USD",
+      "customAlias": "",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "details",
+      "labelColor": "#FFFFFF",
+      "notation": "standard",
+      "originalId": "customColumn1",
       "sticky": "",
       "textColor": "#18181b",
       "textSize": "0.875rem",

@@ -1,0 +1,6 @@
+UPDATE public."movies"
+SET 
+    title = '{{TitleInput.text}}',
+    overview = '{{OverviewInput.text}}',
+    genres = '{{GenresInput.text}}'
+WHERE id = {{MoviesTable.selectedRow.id}};
