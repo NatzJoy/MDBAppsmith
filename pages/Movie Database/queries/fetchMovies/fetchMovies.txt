@@ -1,4 +1,0 @@
-SELECT * FROM public."movies" 
-WHERE title ILIKE '%' || {{MoviesTable.searchText}} || '%' 
-ORDER BY title 
-LIMIT {{MoviesTable.pageSize}} OFFSET {{(MoviesTable.pageNo - 1) * MoviesTable.pageSize}};
