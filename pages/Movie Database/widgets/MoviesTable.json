@@ -165,9 +165,36 @@
     },
     {
       "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.original_title.onSubmit"
+    },
+    {
+      "key": "primaryColumns.overview.onSubmit"
+    },
+    {
+      "key": "primaryColumns.popularity.onSubmit"
+    },
+    {
+      "key": "primaryColumns.keywords.onSubmit"
+    },
+    {
+      "key": "primaryColumns.director.onSubmit"
+    },
+    {
+      "key": "primaryColumns.tagline.onSubmit"
+    },
+    {
+      "key": "primaryColumns.vote_average.onSubmit"
+    },
+    {
+      "key": "primaryColumns.vote_count.onSubmit"
+    },
+    {
+      "key": "primaryColumns.genres.onSubmit"
     }
   ],
-  "enableClientSideSearch": false,
+  "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
   "inlineEditingSaveOption": "ROW_LEVEL",
@@ -177,7 +204,7 @@
   "isVisibleDownload": false,
   "isVisibleFilters": false,
   "isVisiblePagination": true,
-  "isVisibleSearch": false,
+  "isVisibleSearch": true,
   "key": "4k6mfjggld",
   "label": "Data",
   "leftColumn": 0,
@@ -302,6 +329,7 @@
       "isVisible": true,
       "label": "director",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "director",
       "sticky": "",
       "textColor": "#18181b",
@@ -336,6 +364,7 @@
       "isVisible": true,
       "label": "genres",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "genres",
       "sticky": "",
       "textColor": "#18181b",
@@ -472,6 +501,7 @@
       "isVisible": true,
       "label": "keywords",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "keywords",
       "sticky": "",
       "textColor": "#18181b",
@@ -506,6 +536,7 @@
       "isVisible": true,
       "label": "original_title",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run(MoviesTable.updatedRow.original_title).then(() => {\n  storeValue(\"\", \"\");\n});}}",
       "originalId": "original_title",
       "sticky": "",
       "textColor": "#7e22ce",
@@ -540,12 +571,15 @@
       "isVisible": true,
       "label": "overview",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run().then(() => {\n  showAlert('', 'success');\n});}}",
       "originalId": "overview",
       "sticky": "",
       "textColor": "#18181b",
       "textSize": "0.875rem",
       "thousandSeparator": true,
-      "validation": {},
+      "validation": {
+        "isColumnEditableCellRequired": false
+      },
       "verticalAlignment": "CENTER",
       "width": 150
     },
@@ -574,6 +608,7 @@
       "isVisible": true,
       "label": "popularity",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run().then(() => {});}}",
       "originalId": "popularity",
       "sticky": "",
       "textColor": "#18181b",
@@ -812,6 +847,7 @@
       "isVisible": true,
       "label": "tagline",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "tagline",
       "sticky": "",
       "textColor": "#18181b",
@@ -883,6 +919,7 @@
       "isVisible": true,
       "label": "vote_average",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "vote_average",
       "sticky": "",
       "textColor": "#18181b",
@@ -917,6 +954,7 @@
       "isVisible": true,
       "label": "vote_count",
       "notation": "standard",
+      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "vote_count",
       "sticky": "",
       "textColor": "#18181b",

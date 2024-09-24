@@ -1,8 +1,13 @@
-UPDATE movies
-SET title = COALESCE($1, title),
-    original_title = COALESCE($2, original_title),
-    overview = COALESCE($3, overview),
-    tagline = COALESCE($4, tagline),
-    keywords = COALESCE($5, keywords),
-    genres = COALESCE($6, genres)
-WHERE id = $7;
+UPDATE public."movies"
+SET 
+    title = '{{MoviesTable.updatedRow.title}}',
+    original_title = '{{MoviesTable.updatedRow.original_title}}',
+    overview = '{{MoviesTable.updatedRow.overview}}',
+    popularity = COALESCE(NULLIF('{{MoviesTable.updatedRow.popularity}}', '')::double precision, popularity),
+    vote_average = COALESCE(NULLIF('{{MoviesTable.updatedRow.vote_average}}', '')::double precision, vote_average),
+    vote_count = COALESCE(NULLIF('{{MoviesTable.updatedRow.vote_count}}', '')::double precision, vote_count),
+    genres = '{{MoviesTable.updatedRow.genres}}',
+    tagline = '{{MoviesTable.updatedRow.tagline}}',
+    director = '{{MoviesTable.updatedRow.director}}',
+    keywords = '{{MoviesTable.updatedRow.keywords}}'
+WHERE id = COALESCE(NULLIF('{{MoviesTable.updatedRow.id}}', '')::integer, id);
