@@ -34,28 +34,28 @@
   },
   "columnOrder": [
     "id",
-    "imdb_id",
     "title",
     "original_title",
-    "overview",
-    "release_date",
     "runtime",
-    "budget",
+    "tagline",
+    "overview",
+    "director",
+    "genres",
     "popularity",
     "vote_average",
     "vote_count",
-    "genres",
+    "keywords",
+    "imdb_id",
+    "release_date",
+    "budget",
     "production_companies",
     "production_countries",
     "spoken_languages",
     "status",
-    "tagline",
     "homepage",
-    "director",
-    "keywords",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1727197499452,
+  "columnUpdatedAt": 1727215523172,
   "columnWidthMap": {
     "title": 510
   },
@@ -73,25 +73,10 @@
       "key": "primaryColumns.id.computedValue"
     },
     {
-      "key": "primaryColumns.imdb_id.computedValue"
-    },
-    {
-      "key": "primaryColumns.title.computedValue"
-    },
-    {
       "key": "primaryColumns.original_title.computedValue"
     },
     {
       "key": "primaryColumns.overview.computedValue"
-    },
-    {
-      "key": "primaryColumns.release_date.computedValue"
-    },
-    {
-      "key": "primaryColumns.runtime.computedValue"
-    },
-    {
-      "key": "primaryColumns.budget.computedValue"
     },
     {
       "key": "primaryColumns.popularity.computedValue"
@@ -104,6 +89,30 @@
     },
     {
       "key": "primaryColumns.genres.computedValue"
+    },
+    {
+      "key": "primaryColumns.director.computedValue"
+    },
+    {
+      "key": "primaryColumns.keywords.computedValue"
+    },
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.imdb_id.computedValue"
+    },
+    {
+      "key": "primaryColumns.title.computedValue"
+    },
+    {
+      "key": "primaryColumns.release_date.computedValue"
+    },
+    {
+      "key": "primaryColumns.runtime.computedValue"
+    },
+    {
+      "key": "primaryColumns.budget.computedValue"
     },
     {
       "key": "primaryColumns.production_companies.computedValue"
@@ -122,15 +131,6 @@
     },
     {
       "key": "primaryColumns.homepage.computedValue"
-    },
-    {
-      "key": "primaryColumns.director.computedValue"
-    },
-    {
-      "key": "primaryColumns.keywords.computedValue"
-    },
-    {
-      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -180,9 +180,6 @@
     },
     {
       "key": "primaryColumns.director.onSubmit"
-    },
-    {
-      "key": "primaryColumns.tagline.onSubmit"
     },
     {
       "key": "primaryColumns.vote_average.onSubmit"
@@ -522,7 +519,7 @@
       "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
-      "fontStyle": "BOLD",
+      "fontStyle": "BOLD,ITALIC",
       "horizontalAlignment": "LEFT",
       "id": "original_title",
       "index": 3,
@@ -847,7 +844,6 @@
       "isVisible": true,
       "label": "tagline",
       "notation": "standard",
-      "onSubmit": "{{updateMovies.run()}}",
       "originalId": "tagline",
       "sticky": "",
       "textColor": "#18181b",
@@ -863,7 +859,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "#f3e8ff",
       "columnType": "text",
-      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( ''))}}",
+      "computedValue": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"title\"]))}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -872,14 +868,14 @@
       "horizontalAlignment": "LEFT",
       "id": "title",
       "index": 2,
-      "isCellEditable": false,
-      "isCellVisible": false,
+      "isCellEditable": true,
+      "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "title",
       "notation": "standard",
       "originalId": "title",
@@ -887,10 +883,7 @@
       "textColor": "#7e22ce",
       "textSize": "0.875rem",
       "thousandSeparator": true,
-      "validation": {
-        "isColumnEditableCellRequired": true,
-        "regex": "/"
-      },
+      "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
     },

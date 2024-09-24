@@ -2,8 +2,9 @@
   "appIsExample": false,
   "applicationVersion": 2,
   "collapseInvisibleWidgets": true,
-  "color": "#FBF4ED",
+  "color": "#E3DEFF",
   "evaluationVersion": 2,
+  "icon": "flight",
   "pages": [
     {
       "id": "Movie Database",

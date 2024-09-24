@@ -1,13 +1,12 @@
 UPDATE public."movies"
 SET 
-    title = '{{MoviesTable.updatedRow.title}}',
-    original_title = '{{MoviesTable.updatedRow.original_title}}',
-    overview = '{{MoviesTable.updatedRow.overview}}',
+    original_title = COALESCE(NULLIF('{{MoviesTable.updatedRow.original_title}}', ''), original_title),
+    overview = COALESCE(NULLIF('{{MoviesTable.updatedRow.overview}}', ''), overview),
     popularity = COALESCE(NULLIF('{{MoviesTable.updatedRow.popularity}}', '')::double precision, popularity),
     vote_average = COALESCE(NULLIF('{{MoviesTable.updatedRow.vote_average}}', '')::double precision, vote_average),
     vote_count = COALESCE(NULLIF('{{MoviesTable.updatedRow.vote_count}}', '')::double precision, vote_count),
-    genres = '{{MoviesTable.updatedRow.genres}}',
-    tagline = '{{MoviesTable.updatedRow.tagline}}',
-    director = '{{MoviesTable.updatedRow.director}}',
-    keywords = '{{MoviesTable.updatedRow.keywords}}'
+    genres = COALESCE(NULLIF('{{MoviesTable.updatedRow.genres}}', ''), genres),
+    tagline = COALESCE(NULLIF('{{MoviesTable.updatedRow.tagline}}', ''), tagline),
+    director = COALESCE(NULLIF('{{MoviesTable.updatedRow.director}}', ''), director),
+    keywords = COALESCE(NULLIF('{{MoviesTable.updatedRow.keywords}}', ''), keywords)
 WHERE id = COALESCE(NULLIF('{{MoviesTable.updatedRow.id}}', '')::integer, id);
