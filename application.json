@@ -6,7 +6,11 @@
   "evaluationVersion": 2,
   "pages": [
     {
-      "id": "Page1",
+      "id": "Movie Database",
+      "isDefault": false
+    },
+    {
+      "id": "Home",
       "isDefault": true
     }
   ]

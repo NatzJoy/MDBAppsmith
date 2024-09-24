@@ -1,11 +1,11 @@
 {
   "gitSyncId": "66f1ea58c013812656a61952_d15ee47b-1e32-44b3-8fdc-259ceaba1a8c",
-  "id": "Page1_fetchMovies",
+  "id": "Movie Database_fetchMovies",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.\"movies\" \nORDER BY title \nLIMIT {{MoviesTable.pageSize}} OFFSET {{(MoviesTable.pageNo - 1) * MoviesTable.pageSize}};",
+      "body": "SELECT * FROM public.\"movies\" \nWHERE title ILIKE '%' || {{MoviesTable.searchText}} || '%' \nORDER BY title \nLIMIT {{MoviesTable.pageSize}} OFFSET {{(MoviesTable.pageNo - 1) * MoviesTable.pageSize}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -29,7 +29,7 @@
     ],
     "executeOnLoad": true,
     "name": "fetchMovies",
-    "pageId": "Page1",
+    "pageId": "Movie Database",
     "userSetOnLoad": false
   }
 }

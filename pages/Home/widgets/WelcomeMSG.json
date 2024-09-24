@@ -1,0 +1,52 @@
+{
+  "animateLoading": true,
+  "backgroundColor": "#f3e8ff",
+  "borderColor": "#7e22ce",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "5",
+  "bottomRow": 26,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "Montserrat",
+  "fontSize": "3rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "nf75wyvo1t",
+  "leftColumn": 19,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 16,
+  "mobileLeftColumn": 23,
+  "mobileRightColumn": 39,
+  "mobileTopRow": 12,
+  "needsErrorInfo": false,
+  "originalBottomRow": 26,
+  "originalTopRow": 11,
+  "overflow": "NONE",
+  "parentColumnSpace": 18.203125,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 49,
+  "shouldTruncate": false,
+  "text": "Welcome to \nMovie Database",
+  "textAlign": "CENTER",
+  "textColor": "#7e22ce",
+  "topRow": 11,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "egv8mcgaqw",
+  "widgetName": "WelcomeMSG"
+}
