@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 19,
   "boxShadow": "none",
-  "defaultText": "{{MoviesTable.selectedRow.title}}",
+  "defaultText": "{{MoviesTable.triggeredRow.title}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -18,7 +18,14 @@
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicTriggerPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    },
+    {
+      "key": "onSubmit"
+    }
+  ],
   "iconAlign": "left",
   "inputType": "TEXT",
   "isDisabled": false,
@@ -42,13 +49,15 @@
   "mobileRightColumn": 42,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
+  "onSubmit": "{{updateMovies.run().then(() => {\n  showAlert('Details updated!', 'success');\n});}}",
+  "onTextChanged": "{{storeValue(updateModalMovieDeets.data, \"\");}}",
   "originalBottomRow": 19,
   "originalTopRow": 12,
   "parentColumnSpace": 6.9375,
   "parentId": "6q23049ymh",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
-  "resetOnSubmit": true,
+  "resetOnSubmit": false,
   "responsiveBehavior": "fill",
   "rightColumn": 19,
   "shouldScrollContents": true,

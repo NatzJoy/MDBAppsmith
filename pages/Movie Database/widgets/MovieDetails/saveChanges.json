@@ -20,6 +20,8 @@
       "key": "onClick"
     }
   ],
+  "iconAlign": "left",
+  "iconName": "add-to-folder",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
@@ -32,7 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{updateModalMovieDeets.run()}}",
+  "onClick": "{{updateMovies.run()}}",
   "parentId": "6q23049ymh",
   "placement": "CENTER",
   "recaptchaType": "V3",

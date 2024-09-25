@@ -1,6 +1,6 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-  "allowAddNewRow": false,
+  "allowAddNewRow": true,
   "animateLoading": true,
   "borderColor": "#7e22ce",
   "borderRadius": "0px",
@@ -53,10 +53,9 @@
     "spoken_languages",
     "status",
     "homepage",
-    "customColumn1",
-    "EditActions1"
+    "customColumn1"
   ],
-  "columnUpdatedAt": 1727216360775,
+  "columnUpdatedAt": 1727298372820,
   "columnWidthMap": {
     "title": 510
   },
@@ -145,12 +144,6 @@
   ],
   "dynamicPropertyPathList": [
     {
-      "key": "primaryColumns.EditActions1.isSaveDisabled"
-    },
-    {
-      "key": "primaryColumns.EditActions1.onDiscard"
-    },
-    {
       "key": "tableData"
     }
   ],
@@ -160,12 +153,6 @@
     },
     {
       "key": "onPageSizeChange"
-    },
-    {
-      "key": "primaryColumns.EditActions1.onSave"
-    },
-    {
-      "key": "primaryColumns.EditActions1.onDiscard"
     },
     {
       "key": "onSearchTextChanged"
@@ -199,12 +186,21 @@
     },
     {
       "key": "primaryColumns.genres.onSubmit"
+    },
+    {
+      "key": "primaryColumns.customColumn1.onClick"
+    },
+    {
+      "key": "onAddNewRowDiscard"
+    },
+    {
+      "key": "primaryColumns.title.onSubmit"
     }
   ],
   "enableClientSideSearch": true,
   "flexVerticalAlignment": "start",
   "horizontalAlignment": "LEFT",
-  "inlineEditingSaveOption": "ROW_LEVEL",
+  "inlineEditingSaveOption": "CUSTOM",
   "isLoading": false,
   "isSortable": false,
   "isVisible": true,
@@ -220,63 +216,19 @@
   "mobileLeftColumn": 15,
   "mobileRightColumn": 49,
   "mobileTopRow": 8,
+  "multiRowSelection": true,
   "needsErrorInfo": false,
-  "onAddNewRowSave": "{{Insert_public_movies1.run(() => {\n            showAlert(\"Successfully created!\");\n            Select_public_movies1.run()\n          }, () => {\n            showAlert(\"Unable to create!\");\n          })}}",
+  "onAddNewRowDiscard": "{{removeValue(\"\")}}",
+  "onAddNewRowSave": "{{Insert_public_movies1.run(() => {\n  showAlert(\"Successfully created!\");\n  Select_public_movies1.run();\n}, () => {\n  showAlert(\"Unable to create!\");\n});\nstoreValue(\"\", \"\")}}",
   "onPageChange": "{{fetchMovies.run()}}",
   "onPageSizeChange": "{{fetchMovies.run()}}",
-  "onSearchTextChanged": "{{\n            Select_public_movies1.run();\n            Total_record_public_movies1.run()\n          }}",
+  "onSearchTextChanged": "{{fetchSearchedMovies.run();}}",
   "onSort": "{{\n            Select_public_movies1.run();\n            Total_record_public_movies1.run()\n          }}",
   "parentColumnSpace": 8.265625,
   "parentId": "0",
   "parentRowSpace": 10,
   "primaryColumnId": "id",
   "primaryColumns": {
-    "EditActions1": {
-      "alias": "EditActions1",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
-      "cellBackground": "#f4f4f5",
-      "columnType": "editActions",
-      "computedValue": "",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "discardActionIconName": "delete",
-      "discardActionLabel": "Discard",
-      "discardBorderRadius": "1.5rem",
-      "discardButtonColor": "#7e22ce",
-      "discardButtonVariant": "SECONDARY",
-      "discardIconAlign": "right",
-      "enableFilter": true,
-      "enableSort": true,
-      "id": "EditActions1",
-      "index": 10,
-      "isCellEditable": true,
-      "isCellVisible": true,
-      "isDerived": true,
-      "isDisabled": false,
-      "isDiscardDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": true,
-      "isSaveDisabled": "",
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Save / Discard",
-      "notation": "standard",
-      "onDiscard": "{{fetchMovies.data}}",
-      "onSave": "{{updateMoviePT2.run()}}",
-      "originalId": "EditActions1",
-      "saveActionIconName": "lifesaver",
-      "saveActionLabel": "Save",
-      "saveBorderRadius": "1.5rem",
-      "saveButtonColor": "#7e22ce",
-      "saveButtonVariant": "PRIMARY",
-      "saveIconAlign": "right",
-      "sticky": "right",
-      "thousandSeparator": true,
-      "validation": {},
-      "width": 150
-    },
     "budget": {
       "alias": "budget",
       "allowCellWrapping": false,
@@ -318,7 +270,7 @@
       "borderRadius": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
       "boxShadow": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
       "buttonColor": "{{MoviesTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
-      "buttonLabel": "View Details",
+      "buttonLabel": "View or Edit",
       "buttonStyle": "rgb(3, 179, 101)",
       "cellBackground": "#f3e8ff",
       "columnType": "button",
@@ -342,6 +294,7 @@
       "label": "details",
       "labelColor": "#FFFFFF",
       "notation": "standard",
+      "onClick": "{{showModal(MovieDetails.name).then(() => {});}}",
       "originalId": "customColumn1",
       "sticky": "",
       "textColor": "#18181b",
@@ -928,6 +881,7 @@
       "isVisible": true,
       "label": "title",
       "notation": "standard",
+      "onSubmit": "{{storeValue('', updateMovies.data);}}",
       "originalId": "title",
       "sticky": "",
       "textColor": "#7e22ce",
