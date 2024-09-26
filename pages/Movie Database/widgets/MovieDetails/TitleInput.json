@@ -50,7 +50,7 @@
   "mobileTopRow": 6,
   "needsErrorInfo": false,
   "onSubmit": "{{updateMovies.run().then(() => {\n  showAlert('Details updated!', 'success');\n});}}",
-  "onTextChanged": "{{updateMovies.run({\n  // \"title\": \"title\",\n});}}",
+  "onTextChanged": "{{storeValue('title', updateModalMovieDeets.data);}}",
   "originalBottomRow": 19,
   "originalTopRow": 12,
   "parentColumnSpace": 6.9375,

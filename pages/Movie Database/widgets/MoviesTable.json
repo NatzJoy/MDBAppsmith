@@ -35,6 +35,7 @@
   "columnOrder": [
     "id",
     "title",
+    "customColumn1",
     "original_title",
     "runtime",
     "tagline",
@@ -53,10 +54,9 @@
     "spoken_languages",
     "status",
     "homepage",
-    "customColumn1",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1727308079716,
+  "columnUpdatedAt": 1727366592669,
   "columnWidthMap": {
     "spoken_languages": 206,
     "title": 510
@@ -219,6 +219,9 @@
     },
     {
       "key": "primaryColumns.EditActions1.onDiscard"
+    },
+    {
+      "key": "onRowSelected"
     }
   ],
   "enableClientSideSearch": true,
@@ -240,13 +243,14 @@
   "mobileLeftColumn": 15,
   "mobileRightColumn": 49,
   "mobileTopRow": 8,
-  "multiRowSelection": true,
+  "multiRowSelection": false,
   "needsErrorInfo": false,
   "onAddNewRowDiscard": "{{removeValue(\"\")}}",
-  "onAddNewRowSave": "{{storeValue(\"\", \"\");\nstoreValue(updateMovies.data, \"\");}}",
+  "onAddNewRowSave": "{{storeValue(\"\", \"\");\nupdateMovies.run()}}",
   "onPageChange": "{{fetchMovies.run()}}",
   "onPageSizeChange": "{{fetchMovies.run()}}",
-  "onSearchTextChanged": "",
+  "onRowSelected": "{{showAlert('View or Edit', 'info');}}",
+  "onSearchTextChanged": "{{fetchSearchedMovies.run()}}",
   "onSort": "{{\n            Select_public_movies1.run();\n            Total_record_public_movies1.run()\n          }}",
   "parentColumnSpace": 8.265625,
   "parentId": "0",
@@ -430,7 +434,7 @@
       "isVisible": true,
       "label": "genres",
       "notation": "standard",
-      "onSubmit": "",
+      "onSubmit": "{{storeValue(\"\", \"\")}}",
       "originalId": "genres",
       "sticky": "",
       "textColor": "#18181b",
@@ -602,7 +606,7 @@
       "isVisible": true,
       "label": "original_title",
       "notation": "standard",
-      "onSubmit": "",
+      "onSubmit": "{{storeValue('/', \"\");}}",
       "originalId": "original_title",
       "sticky": "",
       "textColor": "#7e22ce",

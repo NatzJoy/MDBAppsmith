@@ -34,7 +34,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{updateMovies.run()}}",
+  "onClick": "{{fetchMovies.run().then(() => {\n  navigateTo('Movie Database', {}, 'SAME_WINDOW');\n});}}",
   "originalBottomRow": 27,
   "originalTopRow": 23,
   "parentId": "6q23049ymh",
