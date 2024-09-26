@@ -17,7 +17,7 @@
       "key": "defaultText"
     }
   ],
-  "dynamicHeight": "FIXED",
+  "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [
     {
       "key": "onTextChanged"
@@ -49,8 +49,10 @@
   "mobileRightColumn": 64,
   "mobileTopRow": 12,
   "needsErrorInfo": false,
-  "onSubmit": "{{updateMovies.run().then(() => {\n  showAlert('Details updated!', 'success');\n});}}",
-  "onTextChanged": "{{storeValue(updateModalMovieDeets.data, '/');}}",
+  "onSubmit": "{{storeValue(\"\", \"\")}}",
+  "onTextChanged": "{{updateMovies.run({\n //\"genre\": \"genre\",\n});}}",
+  "originalBottomRow": 19,
+  "originalTopRow": 12,
   "parentColumnSpace": 6.9375,
   "parentId": "6q23049ymh",
   "parentRowSpace": 10,
@@ -58,6 +60,7 @@
   "resetOnSubmit": false,
   "responsiveBehavior": "fill",
   "rightColumn": 63,
+  "shouldScrollContents": true,
   "showStepArrows": false,
   "topRow": 12,
   "type": "INPUT_WIDGET_V2",

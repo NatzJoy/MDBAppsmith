@@ -35,6 +35,8 @@
   "mobileTopRow": 18,
   "needsErrorInfo": false,
   "onClick": "{{updateMovies.run()}}",
+  "originalBottomRow": 27,
+  "originalTopRow": 23,
   "parentId": "6q23049ymh",
   "placement": "CENTER",
   "recaptchaType": "V3",

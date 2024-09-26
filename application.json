@@ -8,11 +8,11 @@
   "pages": [
     {
       "id": "Movie Database",
-      "isDefault": false
+      "isDefault": true
     },
     {
-      "id": "Home",
-      "isDefault": true
+      "id": "Page1",
+      "isDefault": false
     }
   ]
 }

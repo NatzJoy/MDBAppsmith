@@ -1,1 +1,1 @@
-SELECT * FROM movies LIMIT 100;
+SELECT * FROM public.movies LIMIT 100;

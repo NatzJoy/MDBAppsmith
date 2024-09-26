@@ -1,0 +1,42 @@
+{
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 91,
+  "boxShadow": "none",
+  "defaultImage": "https://assets.appsmith.com/widgets/default.png",
+  "dynamicBindingPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "enableDownload": false,
+  "enableRotation": false,
+  "flexVerticalAlignment": "start",
+  "image": "https://cdn.vectorstock.com/i/2000v/47/44/movie-night-neon-sign-vector-23044744.avif",
+  "imageShape": "RECTANGLE",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "kwxnhwjscn",
+  "leftColumn": 11,
+  "maxZoomLevel": 1,
+  "mobileBottomRow": 54,
+  "mobileLeftColumn": 28,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 42,
+  "needsErrorInfo": false,
+  "objectFit": "cover",
+  "onClick": "{{navigateTo('Movie Database', {}, 'NEW_WINDOW');}}",
+  "originalBottomRow": 70,
+  "originalTopRow": 33,
+  "parentColumnSpace": 17.640625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 56,
+  "topRow": 14,
+  "type": "IMAGE_WIDGET",
+  "version": 1,
+  "widgetId": "iwf61v3uoj",
+  "widgetName": "Image1"
+}
