@@ -1,0 +1,12 @@
+SELECT
+  *
+FROM
+  public.movies
+WHERE
+  "title" ilike '%{{moviesTable.searchText}}%'
+ORDER BY
+  "{{moviesTable.sortOrder.column || 'id'}}" {{moviesTable.sortOrder.order !== "desc" ? "" : "DESC"}}
+LIMIT
+  {{moviesTable.pageSize}}
+OFFSET
+  {{moviesTable.pageOffset}}

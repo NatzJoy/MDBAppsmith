@@ -1,0 +1,6 @@
+SELECT * public."movies"
+SET 
+    title = '{{TitleInput.text}}',
+    production_companies = '{{CompaniesInput.text}}',
+    spoken_languages = '{{spokenLang.text}}'
+WHERE id = {{moviesTable.triggeredRow.id}};

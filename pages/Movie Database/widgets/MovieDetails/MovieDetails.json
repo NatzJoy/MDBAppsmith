@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "{{appsmith.theme.colors.backgroundColor}}",
   "borderRadius": "0px",
-  "bottomRow": 29,
+  "bottomRow": 396,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,

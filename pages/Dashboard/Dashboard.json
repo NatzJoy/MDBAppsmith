@@ -1,24 +1,23 @@
 {
-  "gitSyncId": "66f1ea58c013812656a61952_f85df86f-2c9f-4b79-a2fe-0797c6bf952c",
+  "gitSyncId": "66f2c1598714823e2c82ae8c_07a5a4eb-da7b-426b-baa3-7dce3cc94f91",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 1040,
+          "bottomRow": 1300,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
-          "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 1300,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
-          "rightColumn": 4896,
+          "rightColumn": 1224,
           "snapColumns": 64,
-          "snapRows": 124,
+          "snapRows": 128,
           "topRow": 0,
           "type": "CANVAS_WIDGET",
           "version": 90,
@@ -27,7 +26,7 @@
         }
       }
     ],
-    "name": "Movie Database",
-    "slug": "movie-database"
+    "name": "Dashboard",
+    "slug": "dashboard"
   }
 }

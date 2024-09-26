@@ -1,0 +1,66 @@
+{
+  "backgroundColor": "#e0dede",
+  "borderColor": "{{appsmith.theme.colors.primaryColor}}",
+  "borderRadius": "",
+  "borderWidth": "",
+  "bottomRow": 108,
+  "boxShadow": "",
+  "children": [
+    {
+      "borderRadius": "0px",
+      "bottomRow": 860,
+      "boxShadow": "none",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "dynamicBindingPathList": [],
+      "dynamicTriggerPathList": [],
+      "isLoading": false,
+      "isVisible": "true",
+      "labelTextSize": "0.875rem",
+      "leftColumn": 0,
+      "minHeight": 870,
+      "parentColumnSpace": 1,
+      "parentId": "xob2hpn350",
+      "parentRowSpace": 1,
+      "rightColumn": 632,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "3f9j16chhb",
+      "widgetName": "Canvas114"
+    }
+  ],
+  "containerStyle": "card",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isLoading": false,
+  "isVisible": "true",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "parentColumnSpace": 19.75,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "rightColumn": 36,
+  "shouldScrollContents": false,
+  "topRow": 22,
+  "type": "CONTAINER_WIDGET",
+  "version": 1,
+  "widgetId": "xob2hpn350",
+  "widgetName": "conMovies"
+}

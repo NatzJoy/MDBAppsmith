@@ -1,1 +1,0 @@
-SELECT DISTINCT spoken_languages FROM movies LIMIT 10;

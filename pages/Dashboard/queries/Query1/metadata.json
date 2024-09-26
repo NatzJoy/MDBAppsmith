@@ -1,11 +1,11 @@
 {
-  "gitSyncId": "66f2c1598714823e2c82ae8c_a971ea86-9f5a-4541-af18-8f9d95ceabd7",
-  "id": "Movie Database_fetchMovieLang",
+  "gitSyncId": "66f2c1598714823e2c82ae8c_8893e252-600a-412a-aa1e-44e626807e15",
+  "id": "Dashboard_Query1",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT DISTINCT spoken_languages FROM movies LIMIT 10;",
+      "body": "SELECT * FROM public.\"movies\" LIMIT 10;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
@@ -23,9 +23,9 @@
       "pluginId": "postgres-plugin"
     },
     "dynamicBindingPathList": [],
-    "executeOnLoad": true,
-    "name": "fetchMovieLang",
-    "pageId": "Movie Database",
-    "userSetOnLoad": true
+    "executeOnLoad": false,
+    "name": "Query1",
+    "pageId": "Dashboard",
+    "userSetOnLoad": false
   }
 }
